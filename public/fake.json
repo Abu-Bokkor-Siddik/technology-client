@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Apple",
+      "img": "https://i.ibb.co/Fzw8ngf/slide-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Samsung",
+      "img": "https://i.ibb.co/VHm2mjn/Samsung-Electronics.png"
+    },
+    {
+      "id": 3,
+      "name": "Sony",
+      "img": "https://i.ibb.co/5GRrp52/download.png"
+    },
+    {
+      "id": 4,
+      "name": "Google",
+      "img": "https://i.ibb.co/TPJJqCT/google-logo-2020.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Intel",
+      "img": "https://i.ibb.co/w7RD2HX/download-1.png"
+    },
+    {
+      "id": 6,
+      "name": "Nokia",
+      "img": "https://i.ibb.co/JxFNCB8/download-2.png"
+    }
+  ]
+  
