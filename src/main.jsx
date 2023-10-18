@@ -15,6 +15,9 @@ import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
 import Authprovider from './components/Authprovider.jsx';
 import Privet from './components/Privet.jsx';
+import Dynamicdd from './Dynamicdd.jsx';
+import Details from './Details.jsx';
+import Update from './Update.jsx';
 
 
 const router = createBrowserRouter([
@@ -44,6 +47,21 @@ const router = createBrowserRouter([
         path:"/regist",
         element:<Register></Register>
       },
+      {
+        path:"/dynamic/:id",
+        element:<Dynamicdd></Dynamicdd>,
+        loader:()=> fetch('/fake.json')
+      },
+      {
+        path:"/details/:id",
+        element:<Details></Details>,
+        loader:({params})=>fetch(`http://localhost:3004/add/${params.id}`)
+      },
+      {
+        path:"/update/:id",
+        element:<Update></Update>,
+        loader:({params})=>fetch(`http://localhost:3004/add/${params.id}`)
+      }
     ]
   },
 ]);

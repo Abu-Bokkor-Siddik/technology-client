@@ -1,56 +1,56 @@
 import React from 'react'
+import { useLoaderData } from 'react-router-dom'
 
-const Add = () => {
-  const handeladd =(e)=>{
-    e.preventDefault()
-   
-    const name = e.target.name1.value
+const Update = () => {
+    const data = useLoaderData()
+
+    console.log(data)
+
+    const updatainfo = (e)=>{
+        e.preventDefault()
+        const name = e.target.name1.value
     const brand = e.target.brand.value
     const type= e.target.type.value
     const price = e.target.price.value
     const short = e.target.short.value
     const rating = e.target.rating.value
-    const photo = e.target.photo.value
-    console.log(name,brand,type,price,short,rating,photo)
-    
-    const itemdata = {name,brand,type,price,short,rating,photo}
+   
+    console.log(name,brand,type,price,short,rating,)
+    const itemdatainfo = {name,brand,type,price,short,rating}
 
-    fetch("http://localhost:3004/add",{
-      method:"POST",
-      headers:{
-        'content-type':'application/json'
-      },
-      body:JSON.stringify(itemdata)
+    fetch(`http://localhost:3004/add/${data._id}`,{
+        method:"PUT",
+        headers:{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify(itemdatainfo)
+      }
+      
+      )
+      .then(result => result.json())
+      .then(data => {
+        console.log(data)
+        if(data.modifiedCount>0){
+         alert('update')
+        }
+      })
+
     }
-    
-    )
-    .then(result => result.json())
-    .then(data => {
-      console.log(data)
-    })
-  }
-
   return (
     <div>
-      <h1>add</h1>
+      
+<div>
+<form onSubmit={updatainfo}  className=" w-[700px] shadow-2xl mx-auto mt-40 p-16">
+              <p className="text-3xl">Update Card</p>
 
-      {/* form  */}
-
-      <div className="hero -mt-60 min-h-screen">
-        <div className="hero-content  flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left  "></div>
-          <div className="card flex-shrink-0 w-[1000px]  shadow-2xl bg-base-100">
-            <form onSubmit={handeladd} className="card-body ">
-              <p className="text-3xl">add item</p>
-
-              <div className="form-control flex flex-row gap-6 my-6">
+              <div className="form-control flex flex-row gap-5 my-6">
                 <label className="label ">
                   <span className="label-text">Name</span>
                 </label>
                 <input
                   name="name1"
                   type="text"
-                  placeholder="Enter coffee name"
+                  placeholder="Enter coffee name" defaultValue={data.name}
                   className="input input-bordered w-96"
                   required
                 />
@@ -60,19 +60,21 @@ const Add = () => {
                 <input
                   type="text"
                  name='brand'
+                 defaultValue={data.brand}
                   placeholder="Brand Name"
                   className="input input-bordered w-96"
                   required
                 />
               </div>
 
-              <div className="form-control flex flex-row gap-5 my-6">
+              <div className="form-control flex flex-row gap-6 my-6">
                 <label className="label ">
                   <span className="label-text">Type</span>
                 </label>
                 <input
                   type="text"
                   name='type'
+                  defaultValue={data.type}
                   placeholder="phone, computer, headphone, etc"
                   className="input input-bordered w-96"
                   required
@@ -83,6 +85,7 @@ const Add = () => {
                 <input
                   type="text"
                   name='price'
+                  defaultValue={data.price}
                   placeholder="Price"
                   className="input input-bordered w-96"
                   required
@@ -96,6 +99,7 @@ const Add = () => {
                 <input
                   type="text"
                   name='short'
+                  defaultValue={data.short}
                   placeholder="Short description"
                   className="input input-bordered w-96"
                   required
@@ -106,33 +110,27 @@ const Add = () => {
                 <input
                   type="text"
                   name='rating'
+                  defaultValue={data.rating}
                   placeholder="Rating"
                   className="input input-bordered w-96"
                   required
                 />
               </div>
 
-              <div className="form-control flex flex-row my-6">
-                <label className="label">
-                  <span className="label-text">Image url  </span>
-                </label>
-                <input
-                  type="text"
-                  name='photo'
-                  placeholder="Image Url"
-                  className="input input-bordered  min-w-[800px]"
-                  required
-                />
-              </div>
+              
               <div className="form-control mt-6">
                 <button type='submit' className="btn btn-primary">Add Item</button>
               </div>
             </form>
-          </div>
-        </div>
-      </div>
+
+
+
+
+</div>
+
+    
     </div>
   )
 }
 
-export default Add
+export default Update

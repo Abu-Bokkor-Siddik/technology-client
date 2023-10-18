@@ -2,32 +2,50 @@
     {
       "id": 1,
       "name": "Apple",
-      "img": "https://i.ibb.co/Fzw8ngf/slide-1.jpg"
+      "img": "https://i.ibb.co/Fzw8ngf/slide-1.jpg",
+      "img1": "https://i.ibb.co/3T9K5JK/3ed2dfaa3b20d772d6018084d465c40a.jpg",
+      "img2": "https://i.ibb.co/rfkhPqw/56f1663652bcd025008b7f55.webp",
+      "img3": "https://i.ibb.co/QNz6KGm/8e2a65b080c0bb3fd4c98ccaff6fec17.jpg"
     },
     {
       "id": 2,
       "name": "Samsung",
-      "img": "https://i.ibb.co/VHm2mjn/Samsung-Electronics.png"
+      "img": "https://i.ibb.co/VHm2mjn/Samsung-Electronics.png",
+      "img1": "https://i.ibb.co/my5Lbz6/5a65592a5fb022743c9c4dcf0f8cf629.jpg",
+      "img2": "https://i.ibb.co/YkyPgC2/images.jpg",
+      "img3": "https://i.ibb.co/r5CPGhj/download.jpg"
     },
     {
       "id": 3,
       "name": "Sony",
-      "img": "https://i.ibb.co/5GRrp52/download.png"
+      "img": "https://i.ibb.co/5GRrp52/download.png",
+      "img1": "https://i.ibb.co/S5XrbD9/ef502e8ea8602cc1b7efcfc69a3b3523-1.jpg",
+      "img2": "https://i.ibb.co/LPFMZfT/8bc55ddf8a117b3895c99bb7da4e95b0.jpg",
+      "img3": "https://i.ibb.co/TPfPDVH/gettyimages-527131410-612x612.jpg"
     },
     {
       "id": 4,
       "name": "Google",
-      "img": "https://i.ibb.co/TPJJqCT/google-logo-2020.jpg"
+      "img": "https://i.ibb.co/TPJJqCT/google-logo-2020.jpg",
+      "img1": "https://i.ibb.co/Scs3Scw/advertise-on-google-free.jpg",
+      "img2": "https://i.ibb.co/9yVkTNr/960x0.webp",
+      "img3": "https://i.ibb.co/tDBxx3n/Google-Ads-Examples-1024x536.jpg"
     },
     {
       "id": 5,
       "name": "Intel",
-      "img": "https://i.ibb.co/w7RD2HX/download-1.png"
+      "img": "https://i.ibb.co/w7RD2HX/download-1.png",
+      "img1": "https://i.ibb.co/Gxb2MSr/142051-intel-second-gen-core-ad.jpg",
+      "img2": "https://i.ibb.co/hCdzscV/58989d06421f6cb035581eb749a12301.jpg",
+      "img3": "https://i.ibb.co/c2M949r/mqdefault.jpg"
     },
     {
       "id": 6,
       "name": "Nokia",
-      "img": "https://i.ibb.co/JxFNCB8/download-2.png"
+      "img": "https://i.ibb.co/JxFNCB8/download-2.png",
+      "img1": "https://i.ibb.co/ZmDk3SN/211210-nokia-t20-shopee-1212-2.jpg",
+      "img2": "https://i.ibb.co/hHTzR7P/images-1.jpg",
+      "img3": "https://i.ibb.co/Tg9425P/download-1.jpg"
     }
   ]
   
