@@ -11,8 +11,8 @@ const Home = () => {
       <h1>Home</h1>
       <Bennar></Bennar>
       <div className=''>
-      <p className='text-4xl'> Brand Name</p>
-      <div className='grid grid-cols-3 gap-20 max-w-6xl mx-auto' >
+      <p className='text-4xl my-16'> Brand Name & Image</p>
+      <div className='grid grid-cols-3 gap-20 max-w-6xl mx-auto my-12' >
       {
         datas.map(item => <div key={item.id}> <Link to={`/dynamic/${item.id}`}> <div
             className="card w-72 h-96 bg-blue-500 shadow-xl">
@@ -32,6 +32,13 @@ const Home = () => {
       }
       
       </div>
+
+      {/*contacts */}
+      {/*feedback */}
+      {/*gallary*/}
+      
+
+      <div></div>
       {/* footer */}
 
       <Footer></Footer>

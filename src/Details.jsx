@@ -1,9 +1,42 @@
 import React from 'react'
+import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom'
 
 const Details = () => {
     const data =useLoaderData()
-    console.log(data)
+    // button disable
+    const [isButtonDisabled, setButtonDisabled] = useState(false);
+  //  user added products requrement 8
+    const addedbyuser=()=>{
+      console.log('addded')
+      console.log(data)
+
+      try{
+      fetch("http://localhost:3004/user",{
+      method:"POST",
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(data)
+    }
+    
+    )
+    .then(result => result.json())
+    .then(data => {
+      if(data.insertedId){
+        alert('added single item')
+      }
+      console.log(data)
+    }
+   
+    
+    )
+
+// bang
+    setButtonDisabled((pre)=>!pre)}catch(error){
+      console.log(error)
+    }
+    }
   return (
     <div className='max-w-3xl mx-auto mt-44'>
       <h1>details{data._id}</h1>
@@ -32,10 +65,13 @@ const Details = () => {
     </p>
     <a className="inline-block" href="#">
       <button
-        className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button"
+        className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none bg-black"
+        type="submit"
+        onClick={addedbyuser}
+        disabled={isButtonDisabled}
+        
       >
-      Add to Cart
+     {isButtonDisabled?'Disabled':' Add to Cart'}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

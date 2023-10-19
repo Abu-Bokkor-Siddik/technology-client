@@ -33,7 +33,8 @@ const router = createBrowserRouter([
       },
       {
         path:"/card",
-        element:<Card></Card>
+        element:<Card></Card>,
+        loader:()=>fetch('http://localhost:3004/user')
       },
       {
         path:"/add",
