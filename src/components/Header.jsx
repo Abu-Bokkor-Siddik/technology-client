@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { contexs } from './Authprovider'
+import Darkmode from './Darkmode'
 
 const Header = () => {
 
@@ -14,11 +15,23 @@ const Header = () => {
         console.log(error.message)
        })
     }
-  return (
-    <div>
-      <h1>header</h1>
+    // dark mood 
+    const [darkModes,setdarkModes]=useState(false)
 
-      <div className="navbar bg-slate-100 ">
+    useEffect(()=>{
+ if(darkModes){
+  document.documentElement.classList.add('dark')
+ }else{
+  
+  document.documentElement.classList.remove('dark')
+ }
+    },[darkModes])
+    
+  return (
+    <div className=''>
+      
+
+      <div className="navbar dark:bg-black ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -56,6 +69,10 @@ const Header = () => {
     user?( <a className="btn btn-accent" onClick={handellogout}>Log out</a>):
     <Link to='/login' className="btn btn-accent">Login </Link>
    }
+  {/*button dark */}
+ <button onClick={()=>{
+  setdarkModes(!darkModes)
+ }} className='btn btn-accent ml-4'>dark</button>
   </div>
 </div>
     </div>

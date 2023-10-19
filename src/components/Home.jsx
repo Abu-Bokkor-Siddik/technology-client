@@ -7,8 +7,8 @@ const Home = () => {
   const datas = useLoaderData() 
   
   return (
-    <div>
-      <h1>Home</h1>
+    <div className='dark:bg-black'>
+      
       <Bennar></Bennar>
       <div className=''>
       <p className='text-4xl my-16'> Brand Name & Image</p>
