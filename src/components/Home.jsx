@@ -2,6 +2,8 @@ import React from 'react'
 import Bennar from './Bennar'
 import { Link, NavLink, useLoaderData } from 'react-router-dom'
 import Footer from './Footer'
+import Contact from './Contact'
+import Carosol from './Carosol'
 
 const Home = () => {
   const datas = useLoaderData() 
@@ -12,7 +14,7 @@ const Home = () => {
       <Bennar></Bennar>
       <div className=''>
       <p className='text-4xl my-16'> Brand Name & Image</p>
-      <div className='grid grid-cols-3 gap-20 max-w-6xl mx-auto my-12' >
+      <div className='grid grid-cols-1 mx-11 lg:grid-cols-3 gap-20 max-w-6xl lg:mx-auto my-12' >
       {
         datas.map(item => <div key={item.id}> <Link to={`/dynamic/${item.id}`}> <div
             className="card w-72 h-96 bg-blue-500 shadow-xl">
@@ -34,8 +36,12 @@ const Home = () => {
       </div>
 
       {/*contacts */}
+
+      <Contact></Contact>
       {/*feedback */}
       {/*gallary*/}
+      <Carosol></Carosol>
+      <button className='btn bg-blue-500 text-white '>See More details</button>
       
 
       <div></div>
