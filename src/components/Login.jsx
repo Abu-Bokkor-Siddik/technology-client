@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { contexs } from './Authprovider'
+import Swal from 'sweetalert2'
 
 
 const Login = () => {
@@ -11,8 +12,22 @@ const Login = () => {
         const password =e.target.password.value
         console.log(email,password)
        login(email,password)
-       .then(result => console.log(result.user))
+       .then(result => {
+        Swal.fire(
+          'Good job!',
+          'You successfully log.',
+          'success'
+        )
+        console.log(result.user)
+      
+      })
        .catch(error =>{
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          html:error,
+        })
         console.error(error)
        })
 

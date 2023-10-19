@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { contexs } from './Authprovider'
-
+import Swal from 'sweetalert2'
 const Register = () => {
     const {regi,profile,setphoto,photo2,setnames} =useContext(contexs)
     console.log(regi)
@@ -11,6 +11,14 @@ const Register = () => {
         const email = e.target.email.value
         const photo = e.target.photo.value
         const password = e.target.password.value
+        if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{6,}$/.test(password)){
+          return Swal.fire({
+            icon: "error",
+            title: "Oops... reload",
+            text: " Your password must be  6 character,capital letter &special letter example bbA@ac",
+          });
+        }
+
       
         photo2(photo)
         setnames(name)
