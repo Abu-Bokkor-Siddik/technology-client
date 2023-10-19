@@ -31,12 +31,12 @@ const Carosol = ({singeldata}) => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
         >
-          <SwiperSlide>slider <img className='h-[800px] w-[1400px]' src={singeldata?.img1} alt="" /></SwiperSlide>
+          <SwiperSlide> <img className='h-[800px] w-[1400px]' src={singeldata?.img1} alt="" /></SwiperSlide>
 
          
-          <SwiperSlide>Slide 3
+          <SwiperSlide>
           <img  className='h-[800px] w-[1400px]' src={singeldata?.img2} alt="" /></SwiperSlide>
-          <SwiperSlide>Slide 4
+          <SwiperSlide>
           <img  className='h-[800px] w-[1400px]' src={singeldata?.img3} alt="" />
           </SwiperSlide>
          

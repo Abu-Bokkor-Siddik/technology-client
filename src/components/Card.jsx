@@ -27,16 +27,17 @@ const Card = () => {
  
   }
   return (
-    <div className='max-w-5xl mx-auto grid grid-cols-2 mt-40 '>
+    <div className='max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 mt-40 gap-10 '>
 
       
 
       {
-        loadeddata1.map(added=><div key={added._id} className=" mx-auto card card-compact w-96 bg-base-100 shadow-2xl">
+        loadeddata1.map(added=><div key={added._id} className=" mx-auto card card-compact  lg:w-96 h-[500px] bg-base-100 shadow-2xl">
         <figure><img src={added.photo} alt="Shoes" /></figure>
         <div className="card-body">
           <h2 className="card-title">{added.brand}</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div className='flex gap-28'><p>{added.type}</p><p>price : {added.price}</p></div>
+          <p className='text-start ml-4'>{added.short}</p>
           <div className="card-actions justify-end">
             <button onClick={()=>addedProductDelete(added._id)} className="btn btn-primary">Delete</button>
           </div>

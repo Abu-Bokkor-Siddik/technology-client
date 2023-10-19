@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/card",
-        element:<Card></Card>,
+        element:<Privet><Card></Card></Privet>,
         loader:()=>fetch('http://localhost:3004/user')
       },
       {
@@ -55,12 +55,12 @@ const router = createBrowserRouter([
       },
       {
         path:"/details/:id",
-        element:<Details></Details>,
+        element:<Privet><Details></Details></Privet>,
         loader:({params})=>fetch(`http://localhost:3004/add/${params.id}`)
       },
       {
         path:"/update/:id",
-        element:<Update></Update>,
+        element:<Privet><Update></Update></Privet>,
         loader:({params})=>fetch(`http://localhost:3004/add/${params.id}`)
       }
     ]

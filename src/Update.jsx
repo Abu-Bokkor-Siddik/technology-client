@@ -12,11 +12,11 @@ const Update = () => {
     const brand = e.target.brand.value
     const type= e.target.type.value
     const price = e.target.price.value
-    const short = e.target.short.value
+    const photo = e.target.short.value
     const rating = e.target.rating.value
    
-    console.log(name,brand,type,price,short,rating,)
-    const itemdatainfo = {name,brand,type,price,short,rating}
+    console.log(name,brand,type,price,photo,rating,)
+    const itemdatainfo = {name,brand,type,price,photo,rating}
 
     fetch(`http://localhost:3004/add/${data._id}`,{
         method:"PUT",
@@ -40,10 +40,10 @@ const Update = () => {
     <div>
       
 <div>
-<form onSubmit={updatainfo}  className=" w-[700px] shadow-2xl mx-auto mt-40 p-16">
+<form onSubmit={updatainfo}  className=" w-auto lg:w-[700px] shadow-2xl mx-auto mt-40 p-16">
               <p className="text-3xl">Update Card</p>
 
-              <div className="form-control flex flex-row gap-5 my-6">
+              <div className="form-control flex flex-col lg:flex-row gap-5 my-6">
                 <label className="label ">
                   <span className="label-text">Name</span>
                 </label>
@@ -51,7 +51,7 @@ const Update = () => {
                   name="name1"
                   type="text"
                   placeholder="Enter coffee name" defaultValue={data.name}
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
                 <label className="label ">
@@ -62,12 +62,12 @@ const Update = () => {
                  name='brand'
                  defaultValue={data.brand}
                   placeholder="Brand Name"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
               </div>
 
-              <div className="form-control flex flex-row gap-6 my-6">
+              <div className="form-control flex flex-col lg:flex-row gap-6 my-6">
                 <label className="label ">
                   <span className="label-text">Type</span>
                 </label>
@@ -76,7 +76,7 @@ const Update = () => {
                   name='type'
                   defaultValue={data.type}
                   placeholder="phone, computer, headphone, etc"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
                 <label className="label ">
@@ -87,21 +87,21 @@ const Update = () => {
                   name='price'
                   defaultValue={data.price}
                   placeholder="Price"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
               </div>
 
-              <div className="form-control  flex flex-row gap-5 my-6">
+              <div className="form-control  flex flex-col lg:flex-row gap-5 my-6">
                 <label className="label ">
-                  <span className="label-text">Short:</span>
+                  <span className="label-text">Img:</span>
                 </label>
                 <input
                   type="text"
                   name='short'
-                  defaultValue={data.short}
+                  defaultValue={data.photo}
                   placeholder="Short description"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
                 <label className="label ">
@@ -112,7 +112,7 @@ const Update = () => {
                   name='rating'
                   defaultValue={data.rating}
                   placeholder="Rating"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
               </div>

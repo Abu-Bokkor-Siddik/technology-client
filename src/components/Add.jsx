@@ -32,18 +32,18 @@ const Add = () => {
 
   return (
     <div>
-      <h1>add</h1>
+   
 
       {/* form  */}
 
-      <div className="hero -mt-60 min-h-screen">
+      <div className="hero  lg:-mt-44 h-auto   lg:min-h-screen">
         <div className="hero-content  flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left  "></div>
-          <div className="card flex-shrink-0 w-[1000px]  shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 mx-auto max-w-[400px]  lg:max-w-[1000px]  shadow-2xl bg-base-100">
             <form onSubmit={handeladd} className="card-body ">
-              <p className="text-3xl">add item</p>
+              <p className="text-3xl">Add Item</p>
 
-              <div className="form-control flex flex-row gap-6 my-6">
+              <div className="form-control flex flex-col lg:flex-row gap-6 my-6">
                 <label className="label ">
                   <span className="label-text">Name</span>
                 </label>
@@ -51,7 +51,7 @@ const Add = () => {
                   name="name1"
                   type="text"
                   placeholder="Enter coffee name"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
                 <label className="label ">
@@ -61,12 +61,12 @@ const Add = () => {
                   type="text"
                  name='brand'
                   placeholder="Brand Name"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
               </div>
 
-              <div className="form-control flex flex-row gap-5 my-6">
+              <div className="form-control flex flex-col lg:flex-row gap-5 my-6">
                 <label className="label ">
                   <span className="label-text">Type</span>
                 </label>
@@ -74,7 +74,7 @@ const Add = () => {
                   type="text"
                   name='type'
                   placeholder="phone, computer, headphone, etc"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
                 <label className="label ">
@@ -84,12 +84,12 @@ const Add = () => {
                   type="text"
                   name='price'
                   placeholder="Price"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
               </div>
 
-              <div className="form-control  flex flex-row gap-5 my-6">
+              <div className="form-control  flex flex-col lg:flex-row gap-5 my-6">
                 <label className="label ">
                   <span className="label-text">Short:</span>
                 </label>
@@ -97,7 +97,7 @@ const Add = () => {
                   type="text"
                   name='short'
                   placeholder="Short description"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
                 <label className="label ">
@@ -107,12 +107,12 @@ const Add = () => {
                   type="text"
                   name='rating'
                   placeholder="Rating"
-                  className="input input-bordered w-96"
+                  className="input input-bordered w-auto lg:w-96"
                   required
                 />
               </div>
 
-              <div className="form-control flex flex-row my-6">
+              <div className="form-control flex flex-col lg:flex-row my-6">
                 <label className="label">
                   <span className="label-text">Image url  </span>
                 </label>
@@ -120,7 +120,7 @@ const Add = () => {
                   type="text"
                   name='photo'
                   placeholder="Image Url"
-                  className="input input-bordered  min-w-[800px]"
+                  className="input input-bordered w-auto  lg:min-w-[800px]"
                   required
                 />
               </div>

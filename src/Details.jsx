@@ -1,15 +1,16 @@
-import React from 'react'
+
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const Details = () => {
     const data =useLoaderData()
     // button disable
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   //  user added products requrement 8
+  console.log(data)
     const addedbyuser=()=>{
-      console.log('addded')
-      console.log(data)
+      
 
       try{
       fetch("http://localhost:3004/user",{
@@ -24,7 +25,11 @@ const Details = () => {
     .then(result => result.json())
     .then(data => {
       if(data.insertedId){
-        alert('added single item')
+        Swal.fire(
+          'Good job!',
+          'Product added successfully.',
+          'success'
+        )
       }
       console.log(data)
     }
@@ -39,7 +44,7 @@ const Details = () => {
     }
   return (
     <div className='max-w-3xl mx-auto mt-44'>
-      <h1>details{data._id}</h1>
+      
 
    
       <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -54,15 +59,14 @@ const Details = () => {
     <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-pink-500 uppercase">
      {data.brand}
     </h6>
-    <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-      Lyft launching cross-platform service this week
+
+    <h4 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+     {data.type}
     </h4>
     <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
-      Like so many organizations these days, Autodesk is a company in
-      transition. It was until recently a traditional boxed software company
-      selling licenses. Yet its own business model disruption is only part of
-      the story
+    {data.short}
     </p>
+    <div className='mb-5'><p>price : {data.price}</p></div>
     <a className="inline-block" href="#">
       <button
         className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none bg-black"
@@ -71,6 +75,7 @@ const Details = () => {
         disabled={isButtonDisabled}
         
       >
+      
      {isButtonDisabled?'Disabled':' Add to Cart'}
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -29,7 +29,7 @@ const Login = () => {
     }
   return (
     <div>
-      <h1>login</h1>
+      
 
 
 
@@ -37,8 +37,8 @@ const Login = () => {
       <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form onSubmit={handlelogin} className="card-body">
+    <div className="card flex-shrink-0 w-80 lg:w-full max-w-sm shadow-2xl bg-base-100">
+      <form onSubmit={handlelogin} className="card-body ">
         <div className="form-control">
         <p>Login</p>
           <label className="label">
@@ -58,7 +58,7 @@ const Login = () => {
 
           <p>If you have no Account.Go <Link className='text-blue-800' to="/regist">Register</Link></p>
 
-          <button onClick={googlelog} className='btn bg-orange-600 mx-24 rounded-lg' >Google</button>
+          <button onClick={googlelog} className='btn bg-orange-600 lg:mx-24 rounded-lg' >Google</button>
         </div>
       </form>
     </div>
