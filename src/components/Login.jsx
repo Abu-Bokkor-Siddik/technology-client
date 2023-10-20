@@ -14,22 +14,23 @@ const Login = () => {
         console.log(email,password)
        login(email,password)
        .then(result => {
-        Swal.fire(
+        console.log(result.user)
+          return Swal.fire(
           'Good job!',
           'You successfully log.',
           'success'
         )
-        console.log(result.user)
+        
       
       })
        .catch(error =>{
+        console.error(error)
 
-        Swal.fire({
+         return Swal.fire({
           icon: 'error',
           title: 'Oops...',
           html:error,
         })
-        console.error(error)
        })
 
 
@@ -56,7 +57,7 @@ const Login = () => {
     <div className="card flex-shrink-0 w-80 lg:w-full max-w-sm shadow-2xl bg-base-100 dark:bg-black dark:text-white dark:shadow-slate-700">
       <form onSubmit={handlelogin} className="card-body ">
         <div className="form-control">
-        <p>Login</p>
+        <p className='text-3xl font-bold'>Login</p>
           <label className="label">
             <span className="label-text">Email</span>
           </label>
@@ -74,9 +75,10 @@ const Login = () => {
 
           <p className='my-5'>If you have no Account.Go <Link className='text-blue-800' to="/regist">Register</Link></p>
 
-          <button onClick={googlelog} className='btn bg-blue-500 lg:mx-24 rounded-lg dark:bg-black dark:text-white' >Google</button>
+          
         </div>
       </form>
+      <button onClick={googlelog} className='btn bg-blue-500 lg:mx-24 rounded-lg dark:bg-black dark:text-white' >Google</button>
     </div>
   </div>
 </div>

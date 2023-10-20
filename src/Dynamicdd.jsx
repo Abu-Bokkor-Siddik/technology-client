@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Carosol from './Carosol'
 import { Link, useLoaderData, useParams } from 'react-router-dom'
 import { useState } from 'react'
@@ -8,6 +8,8 @@ const Dynamicdd = () => {
     const [singeldata,setsingeldata] =useState()
     const [finalsingeldata,setfinalsingeldata] =useState([])
     const [alladditem,setalladditem]=useState([])
+    // loading apply 
+    const [loading,setloading]=useState(true)
 
     const {id} = useParams()
     const intid= parseInt(id)
@@ -15,6 +17,9 @@ const Dynamicdd = () => {
     
 
     useEffect(()=>{
+// setloading
+      setloading(true)
+
         const selectdata =data?.find((item)=> item.id===intid);
         setsingeldata(selectdata)
         
@@ -24,19 +29,26 @@ const Dynamicdd = () => {
 
 // database get all data 
 useEffect(()=>{
+  // setloading
+  setloading(true)
+
   fetch('https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add')
   .then(res => res.json())
   .then(data => setalladditem(data))
 },[])
 
-// console.log(alladditem)
-// console.log(singeldata)
+
 
 
 useEffect(()=>{
+  // setloading
+  setloading(true)
 
   const filter = alladditem.filter(Brand=>Brand?.brand?.toLowerCase() == singeldata?.name?.toLowerCase())
 setfinalsingeldata(filter)
+
+// setloading false
+setloading(false)
 
 },[alladditem,singeldata])
 console.log(finalsingeldata)
@@ -46,6 +58,10 @@ console.log(finalsingeldata)
     
       
       <Carosol singeldata={singeldata}></Carosol>
+      {/*loading */}
+      {loading && <span className="loading loading-spinner loading-lg mt-10"></span>}
+
+
  <div className='max-w-4xl lg:mx-auto grid mx-9 grid-cols-1 lg:grid-cols-2 gap-3 dark:bg-black dark:text-white '>
       {
         finalsingeldata.map(card=><div key={card._id} className="card w-72 h-[400px] bg-blue-300 shadow-xl mt-28 dark:bg-black dark:text-white dark:shadow-slate-700">

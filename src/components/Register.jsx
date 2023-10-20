@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { contexs } from './Authprovider'
 import Swal from 'sweetalert2'
 const Register = () => {
     const {regi,profile,setphoto,photo2,setnames} =useContext(contexs)
-    console.log(regi)
+    
+ const navigate =useNavigate()
+
     const handelregister = (e)=>{
         e.preventDefault()
         const name = e.target.name.value
@@ -32,6 +34,7 @@ const Register = () => {
             .then(result => console.log('yes',result.user,name,photo))
             .catch(error => console.log(error))
             console.log(result.user)
+            return navigate('/')
         })
        .catch(error =>{
         console.log(error.message)
