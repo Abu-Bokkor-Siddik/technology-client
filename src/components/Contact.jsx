@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = () => {
   return (
     <div>
-      <h1 className='text-4xl  my-10  dark:bg-black  dark:text-white '>Contact</h1>
+      <h1 className='text-4xl  my-10  dark:bg-black  dark:text-white  font-semibold'>Contact</h1>
       <div className="hero lg:h-[650px] shadow-2xl mb-10" style={{backgroundImage: 'url(https://i.ibb.co/frGMjbc/pngtree-blue-digital-technology-electronic-banner-image-168524.jpg)'}} >
       <div className="hero-content flex-col lg:flex-row-reverse gap-28 ">
         <div className=" flex flex-col gap-10 lg:text-left">

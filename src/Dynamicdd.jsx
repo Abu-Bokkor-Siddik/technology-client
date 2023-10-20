@@ -3,6 +3,7 @@ import Carosol from './Carosol'
 import { Link, useLoaderData, useParams } from 'react-router-dom'
 import { useState } from 'react'
 import Ratting from './Ratting'
+import Footer from './components/Footer'
 
 const Dynamicdd = () => {
     const [singeldata,setsingeldata] =useState()
@@ -62,7 +63,7 @@ console.log(finalsingeldata)
       {loading && <span className="loading loading-spinner loading-lg mt-10"></span>}
 
 
- <div className='max-w-4xl lg:mx-auto grid md:grid-cols-2 mx-9 grid-cols-1 lg:grid-cols-2 gap-3 dark:bg-black dark:text-white '>
+ <div className='max-w-4xl lg:mx-auto grid md:grid-cols-2 mx-9 grid-cols-1 lg:grid-cols-2 gap-3 dark:bg-black dark:text-white pb-11 '>
       {
         finalsingeldata.map(card=><div key={card._id} className="card w-72 h-[400px] bg-blue-300 shadow-xl mt-28 dark:bg-black dark:text-white dark:shadow-slate-700">
         <figure><img className='h-full' src={card?.photo} alt="Shoes" /></figure>
@@ -80,6 +81,9 @@ console.log(finalsingeldata)
       }
       
       </div>
+
+      {/*footer */}
+      <Footer></Footer>
       
     </div>
   )

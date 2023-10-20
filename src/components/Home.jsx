@@ -16,7 +16,7 @@ const Home = () => {
       
       <Bennar></Bennar>
       <div className=''>
-      <p className='text-4xl my-16  dark:bg-black  dark:text-white '> Brand Name & Image</p>
+      <p className='text-4xl my-16 font-semibold  dark:bg-black  dark:text-white '> Brand Name & Image</p>
       <div className='grid grid-cols-1 md:grid-cols-2 mx-11 lg:grid-cols-3 gap-20 max-w-6xl lg:mx-auto my-12 ' >
       {
         datas.map(item => <div key={item.id}> <Link to={`/dynamic/${item.id}`}> <div
