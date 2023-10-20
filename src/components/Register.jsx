@@ -11,6 +11,7 @@ const Register = () => {
         const email = e.target.email.value
         const photo = e.target.photo.value
         const password = e.target.password.value
+        const resets= e.target.reset()
         if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{6,}$/.test(password)){
           return Swal.fire({
             icon: "error",

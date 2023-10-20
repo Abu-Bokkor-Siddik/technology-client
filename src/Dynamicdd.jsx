@@ -24,7 +24,7 @@ const Dynamicdd = () => {
 
 // database get all data 
 useEffect(()=>{
-  fetch('http://localhost:3004/add')
+  fetch('https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add')
   .then(res => res.json())
   .then(data => setalladditem(data))
 },[])

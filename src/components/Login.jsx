@@ -10,6 +10,7 @@ const Login = () => {
         e.preventDefault()
         const email =e.target.email.value
         const password =e.target.password.value
+        const resets =e.target.reset()
         console.log(email,password)
        login(email,password)
        .then(result => {

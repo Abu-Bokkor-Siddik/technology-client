@@ -15,11 +15,12 @@ const Update = () => {
     const price = e.target.price.value
     const photo = e.target.short.value
     const rating = e.target.rating.value
+    
    
     console.log(name,brand,type,price,photo,rating,)
     const itemdatainfo = {name,brand,type,price,photo,rating}
 
-    fetch(`http://localhost:3004/add/${data._id}`,{
+    fetch(`https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add/${data._id}`,{
         method:"PUT",
         headers:{
           'content-type':'application/json'

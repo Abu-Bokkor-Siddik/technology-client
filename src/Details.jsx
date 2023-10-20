@@ -13,7 +13,7 @@ const Details = () => {
       
 
       try{
-      fetch("http://localhost:3004/user",{
+      fetch("https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/user",{
       method:"POST",
       headers:{
         'content-type':'application/json'
@@ -67,7 +67,7 @@ const Details = () => {
     {data.short}
     </p>
     <div className='mb-5'><p>price : {data.price}</p></div>
-    <a className="inline-block" href="#">
+    <p className="inline-block" href="#">
       <button
         className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none bg-black"
         type="submit"
@@ -93,7 +93,7 @@ const Details = () => {
           ></path>
         </svg>
       </button>
-    </a>
+    </p>
   </div>
 </div>
 

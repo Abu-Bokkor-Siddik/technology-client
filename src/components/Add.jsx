@@ -11,11 +11,12 @@ const Add = () => {
     const short = e.target.short.value
     const rating = e.target.rating.value
     const photo = e.target.photo.value
+    const reset = e.target.reset()
     console.log(name,brand,type,price,short,rating,photo)
     
     const itemdata = {name,brand,type,price,short,rating,photo}
 
-    fetch("http://localhost:3004/add",{
+    fetch("https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add",{
       method:"POST",
       headers:{
         'content-type':'application/json'
@@ -125,7 +126,7 @@ const Add = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button type='submit' className="btn btn-primary dark:bg-black dark:text-white">Add Item</button>
+                <button type='submit' className="btn btn-primary dark:bg-black dark:text-white">Add Product</button>
               </div>
             </form>
           </div>
