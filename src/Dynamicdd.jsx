@@ -32,7 +32,7 @@ useEffect(()=>{
   // setloading
   setloading(true)
 
-  fetch('https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add')
+  fetch('https://server-ass-side-2wbl1ssjj-mdmasud01833798650-gmailcom.vercel.app/add')
   .then(res => res.json())
   .then(data => setalladditem(data))
 },[])

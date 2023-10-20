@@ -9,7 +9,7 @@ const Card = () => {
     console.log(id)
 
  
- fetch(`https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/user/${id}`,{
+ fetch(`https://server-ass-side-2wbl1ssjj-mdmasud01833798650-gmailcom.vercel.app/user/${id}`,{
   method:"DELETE"
  })
  .then(res =>res.json())

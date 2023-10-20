@@ -16,7 +16,7 @@ const Add = () => {
     
     const itemdata = {name,brand,type,price,short,rating,photo}
 
-    fetch("https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add",{
+    fetch("https://server-ass-side-2wbl1ssjj-mdmasud01833798650-gmailcom.vercel.app/add",{
       method:"POST",
       headers:{
         'content-type':'application/json'

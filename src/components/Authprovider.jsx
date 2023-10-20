@@ -58,18 +58,7 @@ const Authprovider = ({children}) => {
   };
   
   
-  // profile
-        // const profile =(name,photo)=>{
-        //     setloading(true)
-        //    return updateProfile(auth.currentUser, {
-        //         displayName:name, photoURL:photo
-                
-        //       })
-             
-
-        // }
-
-    // on auth 
+  
 
     useEffect(()=>{
         const subscriber = onAuthStateChanged(auth,(objaiber)=>{

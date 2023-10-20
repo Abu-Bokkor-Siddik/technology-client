@@ -13,7 +13,7 @@ const Details = () => {
       
 
       try{
-      fetch("https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/user",{
+      fetch("https://server-ass-side-2wbl1ssjj-mdmasud01833798650-gmailcom.vercel.app/user",{
       method:"POST",
       headers:{
         'content-type':'application/json'

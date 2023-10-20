@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path:"/card",
         element:<Privet><Card></Card></Privet>,
-        loader:()=>fetch(`https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/user`)
+        loader:()=>fetch(`https://server-ass-side-2wbl1ssjj-mdmasud01833798650-gmailcom.vercel.app/user`)
       },
       {
         path:"/add",
@@ -56,12 +56,12 @@ const router = createBrowserRouter([
       {
         path:"/details/:id",
         element:<Privet><Details></Details></Privet>,
-        loader:({params})=>fetch(`https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add/${params.id}`)
+        loader:({params})=>fetch(`https://server-ass-side-2wbl1ssjj-mdmasud01833798650-gmailcom.vercel.app/add/${params.id}`)
       },
       {
         path:"/update/:id",
         element:<Privet><Update></Update></Privet>,
-        loader:({params})=>fetch(`https://server-ass-side-1wnb55yv7-mdmasud01833798650-gmailcom.vercel.app/add/${params.id}`)
+        loader:({params})=>fetch(`https://server-ass-side-2wbl1ssjj-mdmasud01833798650-gmailcom.vercel.app/add/${params.id}`)
       }
     ]
   },
