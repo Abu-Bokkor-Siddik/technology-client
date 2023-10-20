@@ -1,8 +1,12 @@
-# React + Vite
+# Technology and Electronics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About My Project
+- You also see your favorite ours Brand name in  our project.
+- You also see your favorite products in our project.
+- You can added your products on My card route.
+- You will contact us easily.
+- You see details about us easily.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+ Click here : [https://client-ass-side.web.app/](https://client-ass-side.web.app/)

@@ -47,12 +47,12 @@ const Details = () => {
       
 
    
-      <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md ">
-  <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
+      <div className="relative flex flex-col lg:w-full max-w-[48rem] lg:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md ">
+  <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 left-24 lg:left-0 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
     <img
       src={data.photo}
       alt="image"
-      className="object-cover w-full h-full"
+      className="object-cover   lg:w-full h-full"
     />
   </div>
   <div className="p-6">
@@ -67,7 +67,7 @@ const Details = () => {
     {data.short}
     </p>
     <div className='mb-5'><p>price : {data.price}</p></div>
-    <p className="inline-block" href="#">
+    <a className="inline-block" href="#">
       <button
         className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none bg-black"
         type="submit"
@@ -93,7 +93,7 @@ const Details = () => {
           ></path>
         </svg>
       </button>
-    </p>
+    </a>
   </div>
 </div>
 
