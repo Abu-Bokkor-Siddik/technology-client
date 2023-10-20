@@ -43,7 +43,7 @@ const Details = () => {
     }
     }
   return (
-    <div className='max-w-3xl mx-auto mt-44 '>
+    <div className='max-w-3xl  mx-auto mt-44 '>
       
 
    

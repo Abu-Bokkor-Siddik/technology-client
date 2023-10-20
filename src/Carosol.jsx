@@ -31,7 +31,7 @@ const Carosol = ({singeldata}) => {
             disableOnInteraction: false,
           }}
           navigation
-         className='max-w-[1400px] h-[700px] '
+         className='max-w-[1400px] h-[700px]'
         
          
         >
