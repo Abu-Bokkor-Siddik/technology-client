@@ -46,18 +46,18 @@ console.log(finalsingeldata)
     
       
       <Carosol singeldata={singeldata}></Carosol>
- <div className='max-w-4xl lg:mx-auto grid mx-9 grid-cols-1 lg:grid-cols-2 gap-3'>
+ <div className='max-w-4xl lg:mx-auto grid mx-9 grid-cols-1 lg:grid-cols-2 gap-3 dark:bg-black dark:text-white '>
       {
-        finalsingeldata.map(card=><div key={card._id} className="card w-72 h-[400px] bg-blue-300 shadow-xl mt-28">
+        finalsingeldata.map(card=><div key={card._id} className="card w-72 h-[400px] bg-blue-300 shadow-xl mt-28 dark:bg-black dark:text-white dark:shadow-slate-700">
         <figure><img className='h-full' src={card?.photo} alt="Shoes" /></figure>
         
         
-            <div className='flex gap-20 text-lg font-semibold my-2'><p>{card.brand}</p> <div><Ratting></Ratting></div></div>
+            <div className='flex gap-14 text-lg font-semibold my-2'><p>{card.brand}</p> <div><Ratting></Ratting></div></div>
             <div className='flex gap-28 my-2'><p>{card.type}</p> <p>price:{card.price}</p></div>
             <p className='text-start my-2 text-lg'>{card.name}</p>
             
       
-            <div className='flex gap-16'><Link to={`/details/${card._id}`}><button className='btn btn-secondary'>Details</button></Link> <Link to={`/update/${card._id}`}><button className='btn btn-primary'>Update</button></Link></div>
+            <div className='flex gap-16 '><Link to={`/details/${card._id}`}><button className='btn btn-secondary   dark:bg-black dark:text-white'>Details</button></Link> <Link to={`/update/${card._id}`}><button className='btn btn-primary dark:bg-black dark:text-white'>Update</button></Link></div>
         
       
       </div>)

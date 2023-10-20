@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const Update = () => {
     const data = useLoaderData()
@@ -31,7 +32,12 @@ const Update = () => {
       .then(data => {
         console.log(data)
         if(data.modifiedCount>0){
-         alert('update')
+          Swal.fire(
+            'Good job!',
+            'Product update successfully',
+            'success'
+          )
+          
         }
       })
 
@@ -40,12 +46,12 @@ const Update = () => {
     <div>
       
 <div>
-<form onSubmit={updatainfo}  className=" w-auto lg:w-[700px] shadow-2xl mx-auto mt-40 p-16">
-              <p className="text-3xl">Update Card</p>
+<form onSubmit={updatainfo}  className=" w-auto lg:w-[700px] shadow-2xl mx-auto mt-40 p-16  dark:bg-black">
+              <p className="text-3xl dark:text-white">Update Card</p>
 
               <div className="form-control flex flex-col lg:flex-row gap-5 my-6">
                 <label className="label ">
-                  <span className="label-text">Name</span>
+                  <span className="label-text dark:text-white">Name</span>
                 </label>
                 <input
                   name="name1"
@@ -55,7 +61,7 @@ const Update = () => {
                   required
                 />
                 <label className="label ">
-                  <span className="label-text ">Brand</span>
+                  <span className="label-text dark:text-white ">Brand</span>
                 </label>
                 <input
                   type="text"
@@ -69,7 +75,7 @@ const Update = () => {
 
               <div className="form-control flex flex-col lg:flex-row gap-6 my-6">
                 <label className="label ">
-                  <span className="label-text">Type</span>
+                  <span className="label-text dark:text-white">Type</span>
                 </label>
                 <input
                   type="text"
@@ -80,7 +86,7 @@ const Update = () => {
                   required
                 />
                 <label className="label ">
-                  <span className="label-text">Price</span>
+                  <span className="label-text dark:text-white">Price</span>
                 </label>
                 <input
                   type="text"
@@ -94,7 +100,7 @@ const Update = () => {
 
               <div className="form-control  flex flex-col lg:flex-row gap-5 my-6">
                 <label className="label ">
-                  <span className="label-text">Img:</span>
+                  <span className="label-text dark:text-white">Img:</span>
                 </label>
                 <input
                   type="text"
@@ -105,7 +111,7 @@ const Update = () => {
                   required
                 />
                 <label className="label ">
-                  <span className="label-text">Rating</span>
+                  <span className="label-text dark:text-white">Rating</span>
                 </label>
                 <input
                   type="text"
@@ -119,7 +125,7 @@ const Update = () => {
 
               
               <div className="form-control mt-6">
-                <button type='submit' className="btn btn-primary">Add Item</button>
+                <button type='submit' className="btn btn-primary dark:bg-black dark:text-white">Add Item</button>
               </div>
             </form>
 

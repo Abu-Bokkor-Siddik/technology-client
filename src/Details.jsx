@@ -43,11 +43,11 @@ const Details = () => {
     }
     }
   return (
-    <div className='max-w-3xl mx-auto mt-44'>
+    <div className='max-w-3xl mx-auto mt-44 '>
       
 
    
-      <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md ">
   <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
     <img
       src={data.photo}

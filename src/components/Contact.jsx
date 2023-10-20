@@ -3,9 +3,9 @@ import React from 'react'
 const Contact = () => {
   return (
     <div>
-      <h1 className='text-4xl  my-10'>Contact</h1>
+      <h1 className='text-4xl  my-10  dark:bg-black  dark:text-white '>Contact</h1>
       <div className="hero lg:h-[650px] shadow-2xl mb-10" style={{backgroundImage: 'url(https://i.ibb.co/frGMjbc/pngtree-blue-digital-technology-electronic-banner-image-168524.jpg)'}} >
-      <div className="hero-content flex-col lg:flex-row-reverse gap-28">
+      <div className="hero-content flex-col lg:flex-row-reverse gap-28 ">
         <div className=" flex flex-col gap-10 lg:text-left">
           <h1 className='text-5xl text-white  text-center'>Contact Us To Get Better Information</h1>
           <p className='text-2xl text-white text-center'>Let’s Talk</p>
@@ -15,7 +15,7 @@ const Contact = () => {
           <p></p></div>
 
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 dark:bg-black  dark:text-white">
           <form className="card-body">
           <p>Leave A Message</p>
             <div className="form-control">
@@ -36,7 +36,7 @@ const Contact = () => {
             </div>
             
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Submit</button>
+              <button className="btn btn-primary dark:bg-black dark:text-white">Submit</button>
             </div>
           </form>
         </div>

@@ -40,16 +40,16 @@ const Register = () => {
 
   return (
     <div>
-      <h1>Register</h1>
+      
 
 
 
       <div className="hero  mt-40 ">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content flex-col lg:flex-row-reverse ">
         
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form onSubmit={handelregister} className="card-body">
-            <div className="form-control">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl dark:bg-black dark:text-white ">
+          <form onSubmit={handelregister} className="card-body ">
+            <div className="form-control ">
             <p className='text-5xl font-bold'>Register</p>
               <label className="label">
                 <span className="label-text">Name</span>

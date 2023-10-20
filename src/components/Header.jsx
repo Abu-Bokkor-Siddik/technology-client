@@ -28,10 +28,10 @@ const Header = () => {
     },[darkModes])
     
   return (
-    <div className=' mb-10'>
+    <div className=' pb-10 dark:text-white dark:bg-black'>
       
 
-      <div className="navbar dark:bg-black text-xl  ">
+      <div className="navbar text-xl  ">
   <div className="navbar-start  ">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,7 +67,7 @@ const Header = () => {
 {/*dropdown end */}
 
     </div>
-    <img className='w-14 h-14' src="https://i.ibb.co/M75cvNT/pngtree-natural-eco-electronic-logo-image-471899-1.jpg" alt="" />
+    <img className='w-14 h-14 rounded-full' src="https://i.ibb.co/M75cvNT/pngtree-natural-eco-electronic-logo-image-471899-1.jpg" alt="" />
 
     <p className=' text-sm lg:text-3xl font-bold '> Technology and Electronics</p>
   </div>
@@ -108,7 +108,7 @@ const Header = () => {
 
 
 
-  <div className="navbar-end flex flex-row  ">
+  <div className="navbar-end flex flex-row dark:bg-black dark:text-white  ">
   <p className='hidden lg:block' >Name:{(user?.displayName)||(names&&names) }</p>
 
 
@@ -124,13 +124,13 @@ const Header = () => {
 {/*button */}
 <div className='hidden lg:block'>
    {
-    user?( <a className="btn bg-blue-500" onClick={handellogout}>Log out</a>):
-    <Link to='/login' className="btn btn-accent">Login </Link>
+    user?( <a className="btn  dark:bg-black  dark:text-white bg-blue-500" onClick={handellogout}>Log out</a>):
+    <Link to='/login' className="btn btn-accent  dark:bg-black  dark:text-white">Login </Link>
    }
   {/*button dark */}
  <button onClick={()=>{
   setdarkModes(!darkModes)
- }} className='btn bg-blue-500 ml-4'>{darkModes?"Light":'Dark'}</button>
+ }} className='btn bg-blue-500  dark:bg-black  dark:text-white ml-4'>{darkModes?"Light":'Dark'}</button>
   </div>
 
 

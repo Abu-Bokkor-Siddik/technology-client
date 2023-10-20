@@ -3,7 +3,7 @@ import React from 'react'
 const Carosol = () => {
   return (
     <div>
-    <p className='text-3xl  my-14'>Our Team Members</p>
+    <p className='text-3xl  dark:bg-black  dark:text-white    my-14'>Our Team Members</p>
     <div className="carousel lg:h-80 carousel-center rounded-box">
     <div className="carousel-item">
       <img src="https://i.ibb.co/jHd7T0Y/download-10.jpg
