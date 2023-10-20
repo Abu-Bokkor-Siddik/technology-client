@@ -14,12 +14,13 @@ const Login = () => {
         console.log(email,password)
        login(email,password)
        .then(result => {
-        Swal.fire(
+        console.log(result.user)
+         return Swal.fire(
           'Good job!',
           'You successfully log.',
           'success'
         )
-        console.log(result.user)
+     
       
       })
        .catch(error =>{
