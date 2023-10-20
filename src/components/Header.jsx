@@ -5,12 +5,16 @@ import Darkmode from './Darkmode'
 
 const Header = () => {
 
-    const{user,logOut,photo,names}=useContext(contexs)
+    const{user,logOut,photo,names,setphoto,setnames}=useContext(contexs)
     console.log(photo)
 
     const handellogout =()=>{
         logOut()
-        .then(result => console.log(result.user))
+        .then(result => {
+          setnames('')
+          setphoto('')
+
+          console.log(result.user)})
        .catch(error =>{
         console.log(error.message)
        })

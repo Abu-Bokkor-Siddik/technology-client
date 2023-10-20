@@ -47,8 +47,8 @@ const Details = () => {
       
 
    
-      <div className="relative flex flex-col lg:w-full max-w-[48rem] lg:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md ">
-  <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 left-24 lg:left-0 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
+      <div className="relative md:flex-row flex flex-col lg:w-full max-w-[48rem] lg:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md ">
+  <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 left-24 lg:left-0 md:left-0 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
     <img
       src={data.photo}
       alt="image"

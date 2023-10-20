@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { contexs } from './Authprovider'
 import Swal from 'sweetalert2'
 const Register = () => {
     const {regi,profile,setphoto,photo2,setnames} =useContext(contexs)
     console.log(regi)
+    const navigate =useNavigate()
+
     const handelregister = (e)=>{
         e.preventDefault()
         const name = e.target.name.value
@@ -13,6 +15,8 @@ const Register = () => {
         const password = e.target.password.value
         const resets= e.target.reset()
         if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{6,}$/.test(password)){
+          setnames("")
+          setphoto("")
           return Swal.fire({
             icon: "error",
             title: "Oops... reload",
@@ -24,7 +28,7 @@ const Register = () => {
         photo2(photo)
         setnames(name)
     
-        console.log(name,email,photo,password)
+        
         // regi call
         regi(email,password)
         .then(result => {
@@ -32,9 +36,17 @@ const Register = () => {
             .then(result => console.log('yes',result.user,name,photo))
             .catch(error => console.log(error))
             console.log(result.user)
+           return navigate('/')
         })
        .catch(error =>{
+        setnames('')
+        setphoto('')
         console.log(error.message)
+        return Swal.fire({
+          icon: "error",
+          title: "Oops... reload",
+          text: " some thing wrong",
+        });
        })
     }
         

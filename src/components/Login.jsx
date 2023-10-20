@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { contexs } from './Authprovider'
 import Swal from 'sweetalert2'
 
 
 const Login = () => {
     const {google,login}=useContext(contexs)
+    
     const handlelogin=(e)=>{
         e.preventDefault()
         const email =e.target.email.value
