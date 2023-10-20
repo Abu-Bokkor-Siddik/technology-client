@@ -125,7 +125,7 @@ const Header = () => {
 <div className='hidden lg:block'>
    {
     user?( <a className="btn  dark:bg-black  dark:text-white bg-blue-500" onClick={handellogout}>Log out</a>):
-    <Link to='/login' className="btn btn-accent  dark:bg-black  dark:text-white">Login </Link>
+    <Link to='/login' className="btn bg-blue-500  dark:bg-black  dark:text-white">Login </Link>
    }
   {/*button dark */}
  <button onClick={()=>{

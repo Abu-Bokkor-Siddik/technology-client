@@ -71,9 +71,9 @@ const Login = () => {
         <div className="form-control mt-6">
           <button type='submit' className="btn btn-primary dark:bg-black dark:text-white">Login</button>
 
-          <p>If you have no Account.Go <Link className='text-blue-800' to="/regist">Register</Link></p>
+          <p className='my-5'>If you have no Account.Go <Link className='text-blue-800' to="/regist">Register</Link></p>
 
-          <button onClick={googlelog} className='btn bg-orange-600 lg:mx-24 rounded-lg dark:bg-black dark:text-white' >Google</button>
+          <button onClick={googlelog} className='btn bg-blue-500 lg:mx-24 rounded-lg dark:bg-black dark:text-white' >Google</button>
         </div>
       </form>
     </div>
